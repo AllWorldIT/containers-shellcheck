@@ -20,6 +20,11 @@
 # IN THE SOFTWARE.
 
 
+# Check we have at least one argument
+if [ "$#" -lt 1 ]; then
+    echo "USAGE: $0 <DIR> ..."
+fi
+
 # Grab directory from argument list
 CHECK_DIR="${*: -1}"
 ARGS=( "${@:1:$#-1}" )
